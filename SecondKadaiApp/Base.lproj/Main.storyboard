@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="landscape" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,34 +13,45 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SecondKadaiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYa-mh-X9L">
-                                <rect key="frame" x="338" y="127" width="175" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYa-mh-X9L">
+                                <rect key="frame" x="109" y="209" width="175" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="99J-j8-CKn">
-                                <rect key="frame" x="371" y="268" width="104" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99J-j8-CKn">
+                                <rect key="frame" x="132" y="363" width="130" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Mpi-8V-cdL"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="名前を表示"/>
                                 <connections>
                                     <segue destination="HVK-JQ-l68" kind="show" id="sgV-yZ-Hsa"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54N-jP-tP8">
-                                <rect key="frame" x="336" y="179" width="175" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ここに名前を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54N-jP-tP8">
+                                <rect key="frame" x="122" y="259" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="J5D-7h-wDu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="99J-j8-CKn" firstAttribute="top" secondItem="54N-jP-tP8" secondAttribute="bottom" constant="70" id="K8s-o9-x1s"/>
+                            <constraint firstItem="54N-jP-tP8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PBg-O9-tZT"/>
+                            <constraint firstItem="99J-j8-CKn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UPT-kA-zVK"/>
+                            <constraint firstItem="54N-jP-tP8" firstAttribute="top" secondItem="nYa-mh-X9L" secondAttribute="bottom" constant="30" id="dVh-tp-mW7"/>
+                            <constraint firstItem="nYa-mh-X9L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f44-8k-PlD"/>
+                            <constraint firstItem="nYa-mh-X9L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="hYf-px-XyF"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="nameText" destination="54N-jP-tP8" id="yc3-Uw-yF8"/>
@@ -48,26 +59,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1.4084507042253522" y="-95.419847328244273"/>
+            <point key="canvasLocation" x="-2.2900763358778624" y="-95.774647887323951"/>
         </scene>
         <!--Display Name View Controller-->
         <scene sceneID="rti-Bf-7za">
             <objects>
                 <viewController id="HVK-JQ-l68" customClass="displayNameViewController" customModule="SecondKadaiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4qo-1G-ZAA">
-                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-xT-sdN">
-                                <rect key="frame" x="301" y="184" width="255" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-xT-sdN">
+                                <rect key="frame" x="176" y="148" width="41" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3L-fM-Utl">
-                                <rect key="frame" x="400" y="247" width="56" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3L-fM-Utl">
+                                <rect key="frame" x="169" y="267" width="56" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="戻る"/>
                                 <connections>
@@ -77,6 +86,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dgs-tS-ekU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W3L-fM-Utl" firstAttribute="top" secondItem="kHA-xT-sdN" secondAttribute="bottom" constant="100" id="0cJ-bF-aj5"/>
+                            <constraint firstItem="kHA-xT-sdN" firstAttribute="centerX" secondItem="4qo-1G-ZAA" secondAttribute="centerX" id="7HR-I5-aDs"/>
+                            <constraint firstItem="W3L-fM-Utl" firstAttribute="centerX" secondItem="4qo-1G-ZAA" secondAttribute="centerX" id="DCC-m5-0vv"/>
+                            <constraint firstItem="kHA-xT-sdN" firstAttribute="top" secondItem="Dgs-tS-ekU" secondAttribute="top" constant="150" id="aOR-GO-eAh"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="name" destination="kHA-xT-sdN" id="vN7-Im-z4N"/>
